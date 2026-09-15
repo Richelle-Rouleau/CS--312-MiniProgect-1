@@ -48,14 +48,6 @@ app.post("/create-post", (req, res) => {
   res.redirect("/");
 });
 
-app.put("/user/angela", (req, res) => {
-  res.sendStatus(200);
-});
-
-app.patch("/user/angela", (req, res) => {
-  res.sendStatus(200);
-});
-
 app.delete("/delete-post/:id", (req, res) => {
   const id = Number(req.params.id);
   const index = posts.findIndex((post) => post.id === id);
